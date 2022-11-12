@@ -29,7 +29,7 @@
 				if ($counter > 0) {
 					$tds = $transaction->td;
 					$date = strtotime($tds[0]);
-					$amount = floatval($tds[3]); ?>
+					$amount = floatval(str_replace(",","",$tds[3])); ?>
 					<STMTTRN>
 						<TRNTYPE>DEBIT
 						<DTPOSTED><?php echo date("YmdHis",$date); ?>[0:GMT]
